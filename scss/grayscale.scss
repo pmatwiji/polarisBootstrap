@@ -1,7 +1,12 @@
 @import 'variables.scss';
 @import 'mixins.scss';
+@font-face {
+    font-family: 'Polaris';
+    src: url(../fonts/GothaProBol.otf);
+}
+
 body {
-  font-family: 'Lora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Polaris', Helvetica, Arial, sans-serif;
 
   position: relative;
 
@@ -23,7 +28,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Polaris', Helvetica, Arial, sans-serif;
   font-weight: 700;
 
   margin: 0 0 35px;
@@ -60,7 +65,7 @@ a {
 }
 
 #mainNav {
-  font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Polaris', Helvetica, Arial, sans-serif;
 
   margin-bottom: 0;
 
@@ -73,14 +78,14 @@ a {
 
     padding: 11px;
 
-    color: black;
+    color: rgb(255, 255, 255);
     border: 1px solid white;
   }
   .navbar-brand {
     font-weight: 700;
   }
   a {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
   }
   .navbar-nav {
     .nav-item {
@@ -119,7 +124,7 @@ a {
     }
     .nav-link.active {
       outline: none;
-      background-color: rgba(white, .3);
+      background-color: rgba($primary, .3);
       &:hover {
         color: white;
       }
@@ -136,8 +141,8 @@ a {
 
   text-align: center;
 
-  color: rgb(0, 0, 0);
-  background: url('../img/video.jpg') no-repeat bottom center scroll;
+  color: rgba(255, 255, 255, 0.7);
+  background: url('../img/band.jpg') no-repeat center center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -180,7 +185,7 @@ a {
   -moz-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
 
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   border: 2px solid white;
   border-radius: 100% !important;
   background: transparent;
@@ -199,7 +204,7 @@ a {
 
 .download-section {
   color: white;
-  background: url('../img/downloads-bg.jpg') no-repeat center center scroll;
+  background: url('../img/live.jpg') no-repeat center center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -222,7 +227,7 @@ a {
 }
 
 .btn {
-  font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Polaris', Helvetica, Arial, sans-serif;
   font-weight: 400;
 
   -webkit-transition: all 0.3s ease-in-out;
@@ -294,5 +299,41 @@ img::-moz-selection {
 }
 
 .bit-widget{
-  background-color: #121526!important;
+  background-color: #ffffff69!important;
+  .bit-offers, .bit-rsvp{
+    background-color:$primary!important;
+   // border: 1px solid $primary!important;
+  }
+ .bit-rsvp{
+    color: white!important;
+  }
+  .bit-event{
+    border-top: 1px solid rgb(0, 0, 0)!important;
+  }
+}
+
+.main-video {
+	width: 100%;
+	max-width: 850px;
+	text-align: center;
+	margin: 2rem 0;
+}
+
+#video {
+	padding: 1%;
+	width: 100%;
+}
+
+.videoContainer {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+  height: 0;
+  iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+  height: 100%;
+  }
 }
